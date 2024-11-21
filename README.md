@@ -1,47 +1,35 @@
-# Astro Starter Kit: Minimal
+# Dragon
 
-```sh
-npm create astro@latest -- --template minimal
-```
+- Consultar todas las péliculas (populares)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+https://api.themoviedb.org/3/movie/popular?api_key=API_KEY&language=es-ES&page=1
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Consultar todas las péliculas (mejor calificadas)
 
-## 🚀 Project Structure
+https://api.themoviedb.org/3/movie/top_rated?api_key=API_KEY&language=es-ES&page=1
 
-Inside of your Astro project, you'll see the following folders and files:
+- Filtrar por title
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+https://api.themoviedb.org/3/search/movie?api_key=API_KEY&language=es-ES&query=padrino
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- Consultar todos los generos que existen
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+https://api.themoviedb.org/3/genre/movie/list?api_key=API_KEY&language=es-ES
 
-Any static assets, like images, can be placed in the `public/` directory.
+- Consultar con varios filtros
 
-## 🧞 Commands
+https://api.themoviedb.org/3/discover/movie?api_key=API_KEY&language=es-ES&with_genres=28,12&vote_average.gte=7&primary_release_year=2020&sort_by=vote_average.desc
 
-All commands are run from the root of the project, from a terminal:
+- Consultar detalle de pélicula con id 912649
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+https://api.themoviedb.org/3/movie/912649?api_key=API_KEY&language=es-ES&append_to_response=videos
 
-## 👀 Want to learn more?
+---
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Consultar trailer de la pélicula 912649
+
+https://api.themoviedb.org/3/movie/912649/videos?api_key=API_KEY&language=es-ES
+
+- Consultar péliculas por genero
+
+https://api.themoviedb.org/3/discover/movie?api_key=API_KEY&language=es-ES&with_genres=28
