@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="grid gap-4 grid-rows-[auto,1fr,auto] min-h-screen">
+    <header class="p-4 border-b border-gray-400">
+      <nav>
+        <a href="/" class="text-blue-500">Inicio</a>
+      </nav>
+    </header>
+    <main class="p-4">
+      <slot />
+    </main>
+    <footer class="text-center p-4 border-t border-gray-400">
+      ©️Casi todos los derechos reservados. 🎥
+    </footer>
+  </body>
+</html>
