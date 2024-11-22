@@ -1,0 +1,9 @@
+---
+import { Image } from "astro:assets";
+import logo from "./dragon.avif";
+import { ROUTER } from "../../../pages/rotuer";
+---
+
+<a href={ROUTER.index.path}
+  ><Image class="rounded-full" src={logo} width={64} alt="logo dragon" /></a
+>

@@ -1,4 +1,6 @@
 ---
+import Logo from "../../components/logos/Logo/Logo.astro";
+
 interface Props {
   title: string;
 }
@@ -17,6 +19,7 @@ const { title } = Astro.props;
   <body class="grid gap-4 grid-rows-[auto,1fr,auto] min-h-screen">
     <header class="p-4 border-b border-gray-400">
       <nav>
+        <Logo />
         <a href="/" class="text-blue-500">Inicio</a>
       </nav>
     </header>
