@@ -1,0 +1,19 @@
+:root {
+  --bg-main: whitesmoke; /* Fondo Principal */
+  --bg-surf: #ccc; /* Superficie */
+  --primary: red; /* Primario */
+  --secondary: #252525; /* Secundario */
+  --titles: #fff; /* Texto Principal */
+  --paras: #fff; /* Texto Secundario */
+  --hl: #ffbc42; /* Resaltado */
+  --accent: #dd4ea5; /* Acento */
+  --hover: #3c91e6; /* Hover */
+
+  /* Common */
+  --blue: #0066cc;
+  --red: #cd231d;
+  --green: #8c9900;
+  --grey: grey;
+  --black: black;
+  --white: whitesmoke;
+}

@@ -1,9 +1,8 @@
 ---
 import Layout from "../layouts/Layout/Layout.astro";
-
-const TITLE = "Péliculas";
+import { ROUTER } from "./rotuer";
 ---
 
-<Layout title={TITLE}>
-  <h1>{TITLE} 🎥</h1>
+<Layout title={ROUTER.index.display}>
+  <h1>{ROUTER.index.display}</h1>
 </Layout>

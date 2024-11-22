@@ -1,0 +1,16 @@
+.header {
+  padding: var(--md);
+  border-bottom: var(--border);
+
+  .nav {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    .anchors {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--lg);
+    }
+  }
+}

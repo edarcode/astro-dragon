@@ -1,4 +1,11 @@
 ---
+import "../../styles/scales.css";
+import "../../styles/colors.css";
+import "../../styles/fonts.css";
+import "../../styles/reset.css";
+import "../../styles/vars.css";
+import css from "./Layout.module.css";
+
 import { ViewTransitions } from "astro:transitions";
 import Footer from "./Footer/Footer.astro";
 import Header from "./Header/Header.astro";
@@ -19,9 +26,9 @@ const { title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="grid gap-4 grid-rows-[auto,1fr,auto] min-h-screen">
+  <body class={css.body}>
     <Header />
-    <main class="p-4">
+    <main>
       <slot />
     </main>
     <Footer />

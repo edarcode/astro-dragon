@@ -1,18 +1,15 @@
 ---
+import css from "./Header.module.css";
 import Logo from "../../../components/logos/Logo/Logo.astro";
 import { ROUTER } from "../../../pages/rotuer";
 ---
 
-<header class="p-4 border-b border-gray-400">
-  <nav class="grid grid-cols-[auto,1fr] items-center gap-5">
+<header class={css.header}>
+  <nav class={css.nav}>
     <Logo />
-    <div class="flex justify-center items-center gap-5">
-      <a href={ROUTER.index.path} class="text-blue-500 text-center"
-        >{ROUTER.index.display}</a
-      >
-      <a href={ROUTER.about.path} class="text-blue-500 text-center"
-        >{ROUTER.about.display}</a
-      >
+    <div class={css.anchors}>
+      <a href={ROUTER.index.path}>{ROUTER.index.display}</a>
+      <a href={ROUTER.about.path}>{ROUTER.about.display}</a>
     </div>
   </nav>
 </header>
