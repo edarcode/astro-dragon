@@ -3,4 +3,8 @@ export const ROUTER = {
     display: "Inicio",
     path: "/",
   },
+  about: {
+    display: "Sobre nosotros",
+    path: "/about/",
+  },
 };
