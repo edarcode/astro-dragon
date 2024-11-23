@@ -1,8 +1,10 @@
 ---
+import Movies from "../components/views/index/Movies/Movies";
 import Layout from "../layouts/Layout/Layout.astro";
 import { ROUTER } from "./router";
 ---
 
 <Layout title={ROUTER.index.display}>
   <h1>{ROUTER.index.display}</h1>
+  <Movies client:load />
 </Layout>
