@@ -1,0 +1,17 @@
+---
+import css from "./StaticPagination.module.css";
+
+interface Props {
+  prev?: string;
+  next?: string;
+  currentPage: number;
+}
+
+const { next, prev, currentPage } = Astro.props;
+---
+
+<div class={css.paged}>
+  <a href={prev}><button disabled={!prev}>Anterior</button></a>
+  <span>{currentPage}</span>
+  <a href={next}><button disabled={!next}>Siguiente</button></a>
+</div>
