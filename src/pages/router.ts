@@ -1,6 +1,6 @@
 export const ROUTER = {
   index: {
-    display: "Inicio",
+    display: "Péliculas",
     path: "/",
   },
   about: {
