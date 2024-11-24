@@ -5,6 +5,5 @@ import { ROUTER } from "./router";
 ---
 
 <Layout title={ROUTER.index.display}>
-  <h1>{ROUTER.index.display}</h1>
-  <Movies client:load />
+  <Movies client:only="react" />
 </Layout>

@@ -11,7 +11,7 @@ const queryClient = new QueryClient({
   },
 });
 
-export default function Island() {
+export default function Movies() {
   return (
     <QueryClientProvider client={queryClient}>
       <Slot />
