@@ -1,4 +1,4 @@
-.slot {
+.cards {
   display: grid;
   gap: var(--md);
   grid-template-columns: repeat(auto-fit, 240px);

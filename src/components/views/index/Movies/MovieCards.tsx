@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import { getPopularMoviesService } from "./getPopularMoviesService";
 import MovieCard from "./MovieCard";
-import css from "./Slot.module.css";
+import css from "./MovieCards.module.css";
 
-export default function Slot() {
+export default function MovieCards() {
   const { data, isLoading } = useQuery({
     queryKey: ["popularMovies"],
     queryFn: getPopularMoviesService,
@@ -13,7 +13,7 @@ export default function Slot() {
   if (isLoading) return <div>Cargando...</div>;
 
   return (
-    <div className={css.slot}>
+    <div className={css.cards}>
       {data.results.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
