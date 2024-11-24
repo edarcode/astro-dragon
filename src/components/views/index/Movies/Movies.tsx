@@ -1,21 +1,25 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { RouterProvider } from "react-router-dom";
-import { router } from "./router";
+import MovieCards from "./MovieCards";
+import { useState } from "react";
+import MovieDetail from "./MovieDetail";
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false, // default: true,
       staleTime: 24 * 60 * 60 * 1000, // 24h
+      gcTime: 24 * 60 * 60 * 1000,
     },
   },
 });
 
 export default function Movies() {
+  const [isDetails, setIsDetails] = useState(false);
   return (
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
+      {!isDetails && <MovieCards setIsDetails={setIsDetails} />}
+      {isDetails && <MovieDetail setIsDetails={setIsDetails} />}
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );

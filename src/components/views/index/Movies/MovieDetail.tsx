@@ -1,3 +1,12 @@
-export default function MovieDetail() {
-  return <div>Detail</div>;
+export default function MovieDetail({ setIsDetails }: Props) {
+  return (
+    <div>
+      Detail
+      <button onClick={() => setIsDetails(false)}>Volver</button>
+    </div>
+  );
 }
+
+type Props = {
+  setIsDetails: any;
+};

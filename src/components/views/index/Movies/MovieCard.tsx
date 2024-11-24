@@ -1,21 +1,22 @@
 import { TMDB } from "../../../../consts/tmdb";
 import type { PopularMoviesResult } from "./types";
 import css from "./MovieCard.module.css";
-import { Link } from "react-router-dom";
-import { MOVIE_DETAIL } from "./router";
 
-export default function MovieCard({ movie }: Props) {
+export default function MovieCard({ movie, setIsDetails }: Props) {
   const poster = TMDB.completePath(movie.poster_path);
 
   return (
-    <Link to={MOVIE_DETAIL.to}>
-      <picture key={movie.id} className={css.movie}>
-        <img src={poster} alt={movie.title} />
-      </picture>
-    </Link>
+    <picture
+      key={movie.id}
+      className={css.movie}
+      onClick={() => setIsDetails(true)}
+    >
+      <img src={poster} alt={movie.title} />
+    </picture>
   );
 }
 
 type Props = {
   movie: PopularMoviesResult;
+  setIsDetails: any;
 };
