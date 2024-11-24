@@ -3,6 +3,8 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import MovieCards from "./MovieCards";
 import { persistQueryClient } from "@tanstack/react-query-persist-client";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
+import { useMovies } from "./useMovies.store";
+import MovieDetails from "./MovieDetails";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -23,9 +25,12 @@ persistQueryClient({
 });
 
 export default function Movies() {
+  const isMovieDetails = useMovies((movies) => movies.isMovieDetails);
+
   return (
     <QueryClientProvider client={queryClient}>
-      <MovieCards />
+      {!isMovieDetails && <MovieCards />}
+      {isMovieDetails && <MovieDetails />}
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
