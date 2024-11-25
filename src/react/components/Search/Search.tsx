@@ -10,7 +10,7 @@ export default forwardRef(function Search(
 
   return (
     <label className={finalClass}>
-      <input {...rest} ref={ref} type="text" placeholder="Buscar" />
+      <input {...rest} ref={ref} type="text" />
     </label>
   );
 });

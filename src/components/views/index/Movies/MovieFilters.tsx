@@ -13,6 +13,7 @@ import { useMovies } from "./useMovies.store";
 
 export default function MovieFilters({ className, ...rest }: Props) {
   const setFilters = useMovies((movies) => movies.setFilters);
+  const title = useMovies((movies) => movies.filters.title);
 
   const {
     register,
@@ -30,8 +31,12 @@ export default function MovieFilters({ className, ...rest }: Props) {
 
   return (
     <form {...rest} className={finalClass} onSubmit={handleSubmit(obSubmit)}>
-      <Search {...register("title")} />
-      <Btn disabled={!!Object.keys(errors).length}>Filtrar</Btn>
+      <Search
+        {...register("title")}
+        defaultValue={title}
+        placeholder="Título"
+      />
+      <Btn disabled={!!Object.keys(errors).length}>Buscar</Btn>
     </form>
   );
 }

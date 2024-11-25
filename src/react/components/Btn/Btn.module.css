@@ -2,6 +2,9 @@
   min-height: var(--h-inputs);
   border: var(--border);
   border-radius: var(--sm);
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 0 var(--lg);
 
   &:active:not(:disabled) {
     transform: scale(0.95);

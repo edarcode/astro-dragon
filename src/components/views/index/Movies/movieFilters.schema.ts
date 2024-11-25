@@ -4,7 +4,6 @@ export const movieFiltersSchema = z
   .object({
     title: z
       .string()
-      .min(1)
       .max(128)
       .transform((title) => title.toLowerCase()),
   })
