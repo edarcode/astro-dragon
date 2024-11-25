@@ -13,6 +13,7 @@
     "@astrojs/check": "0.9.4",
     "@astrojs/react": "3.6.3",
     "@astrojs/tailwind": "5.1.2",
+    "@hookform/resolvers": "3.9.1",
     "@tanstack/query-sync-storage-persister": "5.60.6",
     "@tanstack/react-query": "5.61.0",
     "@tanstack/react-query-persist-client": "5.61.3",
@@ -21,6 +22,7 @@
     "astro": "4.16.13",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "react-hook-form": "7.53.2",
     "typescript": "5.6.3",
     "zustand": "5.0.1"
   },

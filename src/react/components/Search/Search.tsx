@@ -1,15 +1,18 @@
-import type { InputHTMLAttributes } from "react";
+import { forwardRef, type InputHTMLAttributes } from "react";
 import { joinClass } from "../../../utils/joinClass";
 import css from "./Search.module.css";
 
-export default function Search({ className, ...rest }: Props) {
+export default forwardRef(function Search(
+  { className, ...rest }: Props,
+  ref: any
+) {
   const finalClass = joinClass([css.search, className]);
 
   return (
     <label className={finalClass}>
-      <input {...rest} type="text" placeholder="Buscar" />
+      <input {...rest} ref={ref} type="text" placeholder="Buscar" />
     </label>
   );
-}
+});
 
 type Props = InputHTMLAttributes<HTMLInputElement>;

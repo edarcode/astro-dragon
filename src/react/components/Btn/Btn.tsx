@@ -1,4 +1,4 @@
-import type { HTMLAttributes } from "react";
+import type { ButtonHTMLAttributes } from "react";
 import css from "./Btn.module.css";
 import { joinClass } from "../../../utils/joinClass";
 
@@ -8,4 +8,4 @@ export default function Btn(props: Props) {
   return <button {...rest} className={finalClass}></button>;
 }
 
-type Props = HTMLAttributes<HTMLButtonElement>;
+type Props = ButtonHTMLAttributes<HTMLButtonElement>;

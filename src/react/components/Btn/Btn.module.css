@@ -6,4 +6,8 @@
   &:active:not(:disabled) {
     transform: scale(0.95);
   }
+
+  &:disabled {
+    background-color: transparent;
+  }
 }
