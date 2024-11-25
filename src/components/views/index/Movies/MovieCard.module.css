@@ -3,6 +3,7 @@
   height: 336px;
   border-radius: var(--md);
   overflow: hidden;
+  cursor: pointer;
 
   img {
     width: 100%;
