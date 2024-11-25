@@ -10,7 +10,7 @@ https://api.themoviedb.org/3/movie/top_rated?api_key=API_KEY&language=es-ES&page
 
 - Filtrar por title
 
-https://api.themoviedb.org/3/search/movie?api_key=API_KEY&language=es-ES&query=padrino
+https://api.themoviedb.org/3/search/movie?api_key=API_KEY&language=es-ES&query=padrino&page=1
 
 - Consultar todos los generos que existen
 

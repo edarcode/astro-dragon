@@ -1,4 +1,4 @@
-import Spinner from "../../../react/Spinner/Spinner";
+import Spinner from "../../../../react/components/Spinner/Spinner";
 import MovieCard from "./MovieCard";
 import { useGetPopularMovies } from "./useGetPopularMovies";
 import css from "./MovieCards.module.css";
