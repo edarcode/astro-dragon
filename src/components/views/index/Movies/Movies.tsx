@@ -5,6 +5,7 @@ import { persistQueryClient } from "@tanstack/react-query-persist-client";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
 import { useMovies } from "./useMovies.store";
 import MovieDetails from "./MovieDetails";
+import { useEffect } from "react";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -27,6 +28,10 @@ persistQueryClient({
 
 export default function Movies() {
   const isMovieDetails = useMovies((movies) => movies.isMovieDetails);
+  const resetScrollPos = useMovies((movies) => movies.resetScrollPos);
+  useEffect(() => {
+    return resetScrollPos;
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
