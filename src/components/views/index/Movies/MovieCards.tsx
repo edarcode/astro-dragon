@@ -19,7 +19,7 @@ export default function MovieCards() {
   return (
     <div className={css.cards}>
       {popularMovies.map((movie) => (
-        <MovieCard key={movie.id} movie={movie} />
+        <MovieCard key={crypto.randomUUID() + movie.id} movie={movie} />
       ))}
     </div>
   );

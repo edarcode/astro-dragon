@@ -1,0 +1,11 @@
+.search {
+  display: inline-block;
+
+  input {
+    border: var(--border);
+    border-radius: var(--sm);
+    padding: var(--md);
+    width: 100%;
+    height: 100%;
+  }
+}

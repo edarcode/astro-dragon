@@ -1,5 +1,6 @@
 :root {
   scrollbar-gutter: stable;
+  --mw-layout: 1920px;
 }
 
 .body {
@@ -8,5 +9,9 @@
 
   main {
     padding: var(--md);
+    max-width: var(--mw-layout);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 }

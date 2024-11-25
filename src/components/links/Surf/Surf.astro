@@ -19,6 +19,10 @@ const isActive = Astro.url.pathname === Astro.props.href;
   .isActive {
     position: relative;
 
+    &:focus::after {
+      content: none;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -26,7 +30,7 @@ const isActive = Astro.url.pathname === Astro.props.href;
       left: 0;
       width: 100%;
       height: 1px;
-      background-color: var(--primary);
+      background-color: currentColor;
     }
   }
 </style>

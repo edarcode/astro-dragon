@@ -29,6 +29,7 @@ persistQueryClient({
 export default function Movies() {
   const isMovieDetails = useMovies((movies) => movies.isMovieDetails);
   const resetScrollPos = useMovies((movies) => movies.resetScrollPos);
+
   useEffect(() => {
     return resetScrollPos;
   }, []);
