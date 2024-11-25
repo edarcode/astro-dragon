@@ -1,0 +1,9 @@
+.btn {
+  min-height: var(--h-inputs);
+  border: var(--border);
+  border-radius: var(--sm);
+
+  &:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+}

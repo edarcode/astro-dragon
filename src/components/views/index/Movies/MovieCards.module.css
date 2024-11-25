@@ -1,6 +1,11 @@
-.cards {
+.movieCards {
   display: grid;
-  gap: var(--md);
-  grid-template-columns: repeat(auto-fit, 240px);
-  justify-content: center;
+  gap: var(--lg);
+
+  .cards {
+    display: grid;
+    gap: var(--md);
+    grid-template-columns: repeat(auto-fit, 240px);
+    justify-content: center;
+  }
 }

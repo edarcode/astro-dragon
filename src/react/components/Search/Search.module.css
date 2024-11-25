@@ -1,5 +1,6 @@
 .search {
   display: inline-block;
+  height: var(--h-inputs);
 
   input {
     border: var(--border);

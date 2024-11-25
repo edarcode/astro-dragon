@@ -1,11 +1,9 @@
 ---
 import Movies from "../components/views/index/Movies/Movies";
 import Layout from "../layouts/Layout/Layout.astro";
-import Search from "../react/components/Search/Search";
 import { ROUTER } from "./router";
 ---
 
 <Layout title={ROUTER.index.display}>
-  <Search client:only="react" />
   <Movies client:only="react" />
 </Layout>
