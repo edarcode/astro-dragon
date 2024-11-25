@@ -1,8 +1,20 @@
 ---
-import Layout from "../layouts/Layout/Layout.astro";
 import { ROUTER } from "./router";
+import css from "@views/about/about.module.css";
+import Layout2 from "../layouts/Layout2/Layout2.astro";
+import bladeRunner from "@views/about/bladeRunner.avif";
+import { Picture } from "astro:assets";
 ---
 
-<Layout title={ROUTER.about.display}>
-  <h1>Sobre nosotros</h1>
-</Layout>
+<Layout2 title={ROUTER.about.display}>
+  <div class={css.about}>
+    <Picture
+      class={css.img}
+      src={bladeRunner}
+      alt={"blade runner"}
+      formats={["avif", "webp"]}
+      widths={[768, 1024, bladeRunner.width]}
+      sizes={`(max-width: 375px) 768px, (max-width: 768px) 1024px, (max-width: 1024px) ${bladeRunner.width}px`}
+    />
+  </div>
+</Layout2>

@@ -1,0 +1,10 @@
+.about {
+  height: 100%;
+
+  .img {
+    width: 100dvw;
+    height: 100dvh;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+}
