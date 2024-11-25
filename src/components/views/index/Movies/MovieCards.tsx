@@ -1,17 +1,17 @@
-import MovieCard from "./MovieCard";
-import css from "./MovieCards.module.css";
 import Spinner from "../../../react/Spinner/Spinner";
+import MovieCard from "./MovieCard";
 import { useGetPopularMovies } from "./useGetPopularMovies";
+import css from "./MovieCards.module.css";
 
 export default function MovieCards() {
-  const { isLoading, popularMovies } = useGetPopularMovies();
+  const { popularMovies, isLoading } = useGetPopularMovies();
 
   if (isLoading) return <Spinner />;
   if (!popularMovies) return null;
 
   return (
     <div className={css.cards}>
-      {popularMovies.results.map((movie) => (
+      {popularMovies.map((movie) => (
         <MovieCard key={movie.id} movie={movie} />
       ))}
     </div>
