@@ -24,6 +24,7 @@ const localStoragePersister = createSyncStoragePersister({
 persistQueryClient({
   queryClient,
   persister: localStoragePersister,
+  maxAge: 24 * 60 * 60 * 1000, // 24 horas en milisegundos
 });
 
 export default function Movies() {
