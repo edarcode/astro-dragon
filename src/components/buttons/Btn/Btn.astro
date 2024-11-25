@@ -12,8 +12,11 @@ const { class: cls, ...rest } = Astro.props;
 
 <style>
   button {
-    border: var(--border);
-    padding: 0.5rem 1.5rem;
-    border-radius: 1rem;
+    border: 1px solid transparent;
+    padding: var(--md) var(--xl);
+    border-radius: var(--sm);
+    background-color: var(--primary);
+    min-height: var(--h-inputs);
+    color: var(--white);
   }
 </style>
