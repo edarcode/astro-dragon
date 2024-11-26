@@ -1,11 +1,11 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import MovieCards from "./MovieCards";
 import { persistQueryClient } from "@tanstack/react-query-persist-client";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
 import { useMovies } from "./useMovies.store";
-import MovieDetails from "../MovieDetails/MovieDetails";
+import MovieDetails from "./MovieDetails/MovieDetails";
 import { useEffect } from "react";
+import MovieCards from "./MovieCards/MovieCards";
 
 const queryClient = new QueryClient({
   defaultOptions: {

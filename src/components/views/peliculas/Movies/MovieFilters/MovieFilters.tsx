@@ -1,15 +1,15 @@
-import type { HTMLAttributes } from "react";
-import Search from "../../../../react/components/Search/Search";
-import { joinClass } from "../../../../utils/joinClass";
-import Btn from "../../../../react/components/Btn/Btn";
 import css from "./MovieFilters.module.css";
+import { joinClass } from "src/utils/joinClass";
+import { useMovies } from "../useMovies.store";
 import {
   movieFiltersSchema,
   type MovieFiltersSchema,
 } from "./movieFilters.schema";
-import { zodResolver } from "@hookform/resolvers/zod";
+import Search from "src/react/components/Search/Search";
+import Btn from "src/react/components/Btn/Btn";
+import type { HTMLAttributes } from "react";
 import { useForm } from "react-hook-form";
-import { useMovies } from "./useMovies.store";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 export default function MovieFilters({ className, ...rest }: Props) {
   const setFilters = useMovies((movies) => movies.setFilters);

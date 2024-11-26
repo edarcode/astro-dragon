@@ -1,10 +1,9 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
-import { getPopularMovies } from "./getPopularMovies.service";
-
 import { useEffect } from "react";
 import { useScrollEnd } from "../../../../react/hooks/useScrollEnd";
 import { useMovies } from "./useMovies.store";
 import { addFiltersMovies } from "./addFiltersMovies.util";
+import { getMovies } from "./getMovies.service";
 
 export const useGetMovies = () => {
   const isScrollEnd = useScrollEnd(1000);
@@ -12,7 +11,7 @@ export const useGetMovies = () => {
 
   const { data, isLoading, fetchNextPage } = useInfiniteQuery({
     queryKey: ["movies", filters],
-    queryFn: ({ signal, pageParam: url }) => getPopularMovies({ signal, url }),
+    queryFn: ({ signal, pageParam: url }) => getMovies({ signal, url }),
     initialPageParam: addFiltersMovies({ page: "1", title: filters.title }),
     getNextPageParam: (lastPageMovies) => {
       return addFiltersMovies({

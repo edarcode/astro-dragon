@@ -1,8 +1,6 @@
 import type { PopularMovies } from "./types";
 
-export const getPopularMovies = async (
-  params: Params
-): Promise<PopularMovies> => {
+export const getMovies = async (params: Params): Promise<PopularMovies> => {
   const { signal, url } = params;
 
   const res = await fetch(url, {

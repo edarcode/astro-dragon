@@ -1,7 +1,7 @@
-import { TMDB } from "../../../../consts/tmdb";
-import type { PopularMoviesResult } from "./types";
+import { TMDB } from "../../../../../consts/tmdb";
+import type { PopularMoviesResult } from "../types";
 import css from "./MovieCard.module.css";
-import { useMovies } from "./useMovies.store";
+import { useMovies } from "../useMovies.store";
 
 export default function MovieCard({ movie }: Props) {
   const poster = TMDB.completePath(movie.poster_path);

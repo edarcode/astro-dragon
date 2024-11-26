@@ -1,11 +1,10 @@
-import Spinner from "../../../../react/components/Spinner/Spinner";
-import MovieCard from "./MovieCard";
-
-import css from "./MovieCards.module.css";
 import { useEffect } from "react";
-import { useMovies } from "./useMovies.store";
-import MovieFilters from "./MovieFilters";
-import { useGetMovies } from "./useGetMovies";
+import { useGetMovies } from "../useGetMovies";
+import { useMovies } from "../useMovies.store";
+import Spinner from "src/react/components/Spinner/Spinner";
+import MovieFilters from "../MovieFilters/MovieFilters";
+import MovieCard from "../MovieCard/MovieCard";
+import css from "./MovieCards.module.css";
 
 export default function MovieCards() {
   const { movies, isLoading } = useGetMovies();

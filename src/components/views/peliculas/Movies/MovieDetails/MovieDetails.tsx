@@ -1,4 +1,4 @@
-import { useMovies } from "../Movies/useMovies.store";
+import { useMovies } from "../useMovies.store";
 import css from "./MovieDetails.module.css";
 
 export default function MovieDetails() {
