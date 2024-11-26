@@ -2,6 +2,8 @@
 import { ROUTER } from "src/pages/router";
 import css from "./Intro.module.css";
 import Btn from "src/components/buttons/Btn/Btn.astro";
+import { Picture } from "astro:assets";
+import bladeRunner from "./bladeRunner.avif";
 ---
 
 <div class={css.intro}>
@@ -11,4 +13,13 @@ import Btn from "src/components/buttons/Btn/Btn.astro";
     <span class={css.span3}>EMPIEZA AQUÍ 🎞️</span>
   </h1>
   <a href={ROUTER.peliculas.path}><Btn class={css.btnMovies}>Películas</Btn></a>
+
+  <Picture
+    class={css.bgi}
+    src={bladeRunner}
+    alt={"blade runner"}
+    formats={["avif", "webp"]}
+    widths={[768, 1024, bladeRunner.width]}
+    sizes={`(max-width: 375px) 768px, (max-width: 768px) 1024px, (max-width: 1024px) ${bladeRunner.width}px`}
+  />
 </div>

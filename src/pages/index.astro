@@ -1,8 +1,6 @@
 ---
 import { ROUTER } from "./router";
 import Layout2 from "../layouts/Layout2/Layout2.astro";
-import bladeRunner from "@views/index/bladeRunner.avif";
-import { Picture } from "astro:assets";
 import Intro from "@views/index/Intro/Intro.astro";
 import About from "@views/index/About/About.astro";
 ---
@@ -10,27 +8,4 @@ import About from "@views/index/About/About.astro";
 <Layout2 title={ROUTER.index.display}>
   <Intro />
   <About />
-
-  <Picture
-    class={"bgi"}
-    src={bladeRunner}
-    alt={"blade runner"}
-    formats={["avif", "webp"]}
-    widths={[768, 1024, bladeRunner.width]}
-    sizes={`(max-width: 375px) 768px, (max-width: 768px) 1024px, (max-width: 1024px) ${bladeRunner.width}px`}
-  />
 </Layout2>
-
-<style>
-  .bgi {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100dvw;
-    height: 100dvh;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    filter: brightness(0.7);
-  }
-</style>
