@@ -2,9 +2,17 @@
 import css from "./WhyDragon.module.css";
 import { Picture } from "astro:assets";
 import constantine from "./constantine.avif";
+import { WHY_DRAGON } from "./whyDragon";
+import Card from "src/components/cards/Card/Card.astro";
 ---
 
 <div class={css.why}>
+  <h3>¿Por qué <span>Dragon</span>?</h3>
+
+  <section class={css.cards}>
+    {WHY_DRAGON.map((item) => <Card content={item.reason} />)}
+  </section>
+
   <Picture
     class={css.bgi}
     src={constantine}

@@ -6,14 +6,16 @@ interface Props extends HTMLAttributes<"a"> {}
 const { class: cls, ...rest } = Astro.props;
 ---
 
-<a {...rest} class:list={["surf", cls]}>Películas </a>
+<a {...rest} class:list={["surf", cls]}>PELÍCULAS</a>
 
 <style>
   .surf {
     padding: var(--sm) var(--md);
     border-radius: var(--sm);
-    color: var(--blue);
+    color: var(--accent);
     cursor: pointer;
+    display: inline-block;
+    transition: color 0.2s;
 
     &:hover {
       color: var(--hover);

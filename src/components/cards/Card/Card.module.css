@@ -1,0 +1,13 @@
+.card {
+  width: 300px;
+
+  display: grid;
+  gap: var(--md);
+  place-content: center;
+  padding: var(--lg);
+
+  border: 4px solid var(--green);
+  color: var(--white);
+  font-weight: 500;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+}

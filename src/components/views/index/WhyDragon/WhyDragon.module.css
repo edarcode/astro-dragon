@@ -2,7 +2,35 @@
   position: relative;
   min-height: 90dvh;
 
-  color: var(--white);
+  display: grid;
+  place-content: center;
+  gap: var(--lg);
+
+  h3 {
+    color: var(--white);
+    text-align: center;
+
+    span {
+      color: var(--primary);
+      font-weight: 900;
+      font-size: 1.6em;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--lg);
+    justify-content: center;
+
+    > :nth-child(2) {
+      border-color: var(--accent);
+    }
+
+    > :nth-child(3) {
+      border-color: var(--red);
+    }
+  }
 
   .bgi {
     position: absolute;
@@ -13,6 +41,6 @@
     height: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    filter: brightness(0.7);
+    filter: brightness(0.5);
   }
 }

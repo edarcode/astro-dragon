@@ -18,6 +18,13 @@
     .logo {
       justify-self: center;
     }
+
+    p {
+      padding: var(--md);
+      @media (min-width: 375px) and (max-width: 767px) {
+        text-align: center;
+      }
+    }
   }
 }
 

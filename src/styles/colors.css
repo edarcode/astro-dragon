@@ -2,7 +2,7 @@
   --bg-main: whitesmoke; /* Fondo Principal */
   --bg-surf: #ccc; /* Superficie */
   --primary: red; /* Primario */
-  --secondary: #252525; /* Secundario */
+  --secondary: #202020; /* Secundario */
   --titles: #fff; /* Texto Principal */
   --paras: #fff; /* Texto Secundario */
   --hl: #ffbc42; /* Resaltado */
@@ -11,9 +11,9 @@
 
   /* Common */
   --blue: #0066cc;
-  --red: #cd231d;
+  --red: #ca1a14;
   --green: #8c9900;
-  --grey: grey;
+  --grey: #9d9d9d;
   --black: black;
   --white: whitesmoke;
 }
