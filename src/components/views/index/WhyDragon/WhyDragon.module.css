@@ -1,0 +1,18 @@
+.why {
+  position: relative;
+  min-height: 90dvh;
+
+  color: var(--white);
+
+  .bgi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
+}

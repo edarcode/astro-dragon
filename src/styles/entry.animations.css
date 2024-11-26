@@ -1,19 +1,19 @@
 .contractionEntry {
-  animation: contractionEntry 0.4s linear both;
+  animation: contractionEntry 0.7s linear both;
 }
 
 @keyframes contractionEntry {
-  100% {
-    transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
-  60% {
-    opacity: 0.8;
-  }
   0% {
     letter-spacing: 1em;
     transform: translateZ(300px) translateY(200px);
     opacity: 0;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
   }
 }
 

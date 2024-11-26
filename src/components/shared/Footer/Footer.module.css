@@ -1,5 +1,8 @@
 .footer {
-  text-align: center;
   border-top: var(--border);
   padding: var(--md);
+
+  min-height: 10dvh;
+  display: grid;
+  place-content: center;
 }

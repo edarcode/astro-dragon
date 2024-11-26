@@ -1,0 +1,16 @@
+---
+import css from "./WhyDragon.module.css";
+import { Picture } from "astro:assets";
+import constantine from "./constantine.avif";
+---
+
+<div class={css.why}>
+  <Picture
+    class={css.bgi}
+    src={constantine}
+    alt={"blade runner"}
+    formats={["avif", "webp"]}
+    widths={[768, 1024, constantine.width]}
+    sizes={`(max-width: 375px) 768px, (max-width: 768px) 1024px, (max-width: 1024px) ${constantine.width}px`}
+  />
+</div>
