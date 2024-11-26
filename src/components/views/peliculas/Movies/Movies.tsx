@@ -4,7 +4,7 @@ import MovieCards from "./MovieCards";
 import { persistQueryClient } from "@tanstack/react-query-persist-client";
 import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persister";
 import { useMovies } from "./useMovies.store";
-import MovieDetails from "./MovieDetails";
+import MovieDetails from "../MovieDetails/MovieDetails";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient({
