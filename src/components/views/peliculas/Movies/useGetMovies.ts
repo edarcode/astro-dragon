@@ -6,7 +6,7 @@ import { addFiltersMovies } from "./addFiltersMovies.util";
 import { getMovies } from "./getMovies.service";
 
 export const useGetMovies = () => {
-  const isScrollEnd = useScrollEnd(1000);
+  const isScrollEnd = useScrollEnd(750);
   const filters = useMovies((movies) => movies.filters);
 
   const { data, isLoading, fetchNextPage } = useInfiniteQuery({
