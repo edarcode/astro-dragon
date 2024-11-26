@@ -1,6 +1,6 @@
 export const ROUTER = {
   index: {
-    display: "Sobre nosotros",
+    display: "Inicio",
     path: "/",
   },
   peliculas: {

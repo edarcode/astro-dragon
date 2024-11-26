@@ -12,6 +12,14 @@
     display: grid;
     gap: var(--md);
 
+    @media (min-width: 768px) and (max-width: 1023px) {
+      justify-content: center;
+    }
+
+    @media (min-width: 375px) and (max-width: 767px) {
+      padding-left: var(--lg);
+    }
+
     h1 {
       display: grid;
 
@@ -29,12 +37,6 @@
         font-size: 2rem;
         font-weight: 350;
       }
-    }
-
-    p {
-      font-size: 1.4rem;
-      padding: var(--md);
-      max-width: 700px;
     }
   }
 }
