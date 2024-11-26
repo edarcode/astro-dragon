@@ -1,9 +1,10 @@
 :root {
-  scrollbar-gutter: stable;
   --mw-layout: 1920px;
+  scrollbar-gutter: stable;
 }
 
 .body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  max-width: var(--mw-layout);
 }
