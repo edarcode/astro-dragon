@@ -1,0 +1,16 @@
+---
+import Logo from "src/components/logos/Logo/Logo.astro";
+import css from "./About.module.css";
+import SurfMovies from "src/components/links/SurfMovies/SurfMovies.astro";
+---
+
+<div class={css.about}>
+  <div class={css.container1}>
+    <Logo class={css.logo} />
+    <p>
+      En Dragon, te conectamos con el fascinante mundo del cine. Explora nuestra
+      colección de casi 1 millón de películas, clásicos, últimos estrenos y
+      mucho más. <SurfMovies />
+    </p>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.about {
+  min-height: 50dvh;
+
+  display: grid;
+  place-content: center;
+
+  .container1 {
+    max-width: 644.3px;
+
+    display: grid;
+    gap: var(--lg);
+    font-size: 1.2rem;
+
+    .logo {
+      justify-self: center;
+    }
+  }
+}

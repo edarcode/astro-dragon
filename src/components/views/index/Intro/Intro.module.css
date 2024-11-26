@@ -1,0 +1,33 @@
+.intro {
+  min-height: 100dvh;
+
+  color: var(--white);
+
+  display: grid;
+  gap: var(--md);
+  place-content: center;
+  justify-items: start;
+
+  @media (min-width: 375px) and (max-width: 767px) {
+    padding-left: var(--lg);
+  }
+
+  h1 {
+    display: grid;
+
+    .span1 {
+      font-size: 2rem;
+      font-weight: 200;
+    }
+
+    .span2 {
+      font-size: 4rem;
+      font-weight: 900;
+    }
+
+    .span3 {
+      font-size: 2rem;
+      font-weight: 350;
+    }
+  }
+}

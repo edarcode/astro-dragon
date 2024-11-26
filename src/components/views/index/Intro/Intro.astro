@@ -1,0 +1,14 @@
+---
+import { ROUTER } from "src/pages/router";
+import css from "./Intro.module.css";
+import Btn from "src/components/buttons/Btn/Btn.astro";
+---
+
+<div class={css.intro}>
+  <h1>
+    <span class={css.span1}>TU</span>
+    <span class={css.span2}>PRÓXIMO MARATÓN</span>
+    <span class={css.span3}>EMPIEZA AQUÍ 🎞️</span>
+  </h1>
+  <a href={ROUTER.peliculas.path}><Btn>Películas</Btn></a>
+</div>

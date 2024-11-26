@@ -1,34 +1,18 @@
 ---
 import { ROUTER } from "./router";
-import css from "@views/index/index.module.css";
 import Layout2 from "../layouts/Layout2/Layout2.astro";
 import bladeRunner from "@views/index/bladeRunner.avif";
 import { Picture } from "astro:assets";
-import Btn from "src/components/buttons/Btn/Btn.astro";
+import Intro from "@views/index/Intro/Intro.astro";
+import About from "@views/index/About/About.astro";
 ---
 
 <Layout2 title={ROUTER.index.display}>
-  <div class={css.wrapper}>
-    <div class={css.container1}>
-      <h1>
-        <span class={css.span1}>TU</span>
-        <span class={css.span2}>PRÓXIMO MARATÓN</span>
-        <span class={css.span3}>EMPIEZA AQUÍ 🎞️</span>
-      </h1>
-      <a href={ROUTER.peliculas.path}><Btn>Películas</Btn></a>
-    </div>
-
-    <div class={css.container2}>
-      <p>
-        En Dragon, te conectamos con el fascinante mundo del cine. Explora
-        nuestra colección de casi 1 millón de películas, clásicos, últimos
-        estrenos y mucho más.
-      </p>
-    </div>
-  </div>
+  <Intro />
+  <About />
 
   <Picture
-    class={css.img}
+    class={"bgi"}
     src={bladeRunner}
     alt={"blade runner"}
     formats={["avif", "webp"]}
@@ -36,3 +20,17 @@ import Btn from "src/components/buttons/Btn/Btn.astro";
     sizes={`(max-width: 375px) 768px, (max-width: 768px) 1024px, (max-width: 1024px) ${bladeRunner.width}px`}
   />
 </Layout2>
+
+<style>
+  .bgi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100dvw;
+    height: 100dvh;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
+</style>
