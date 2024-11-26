@@ -10,8 +10,6 @@ export const addFiltersMovies = (filters: Filters = {}) => {
 
   if (filters.page) newUrl.searchParams.set("page", filters.page);
 
-  console.log(newUrl.toString());
-
   return newUrl.toString();
 };
 

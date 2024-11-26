@@ -5,8 +5,6 @@ export const getPopularMovies = async (
 ): Promise<PopularMovies> => {
   const { signal, url } = params;
 
-  console.log("fetch", url);
-
   const res = await fetch(url, {
     method: "GET",
     signal,

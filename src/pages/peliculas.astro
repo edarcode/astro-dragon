@@ -1,0 +1,9 @@
+---
+import Movies from "@views/peliculas/Movies/Movies";
+import Layout from "../layouts/Layout/Layout.astro";
+import { ROUTER } from "./router";
+---
+
+<Layout title={ROUTER.peliculas.display}>
+  <Movies client:only="react" />
+</Layout>
