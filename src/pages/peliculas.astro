@@ -5,5 +5,17 @@ import { ROUTER } from "./router";
 ---
 
 <Layout title={ROUTER.peliculas.display}>
-  <Movies client:only="react" />
+  <main>
+    <Movies client:only="react" />
+  </main>
 </Layout>
+
+<style>
+  main {
+    padding: var(--lg) var(--md);
+    max-width: var(--mw-layout);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+</style>
