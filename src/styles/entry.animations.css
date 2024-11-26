@@ -1,22 +1,3 @@
-.entry {
-  animation-timeline: view();
-
-  animation-name: entry;
-  animation-fill-mode: both;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
-  animation-timing-function: linear;
-}
-
-@keyframes entry {
-  from {
-    transform: scaleX(0);
-  }
-
-  to {
-    transform: scaleX(1);
-  }
-}
-
 .contractionEntry {
   animation: contractionEntry 0.4s linear both;
 }
@@ -36,11 +17,13 @@
   }
 }
 
-.entranceByCenter {
-  animation: entranceByCenter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+/* --------------------------------------------------------- */
+
+.entryByCenter {
+  animation: entryByCenter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-@keyframes entranceByCenter {
+@keyframes entryByCenter {
   0% {
     transform: scale(0);
     opacity: 1;
@@ -50,3 +33,5 @@
     opacity: 1;
   }
 }
+
+/* --------------------------------------------------------- */

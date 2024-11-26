@@ -8,6 +8,7 @@ import "../../styles/animations.css";
 import "../../styles/entry.animations.css";
 import css from "./Layout2.module.css";
 import { ViewTransitions } from "astro:transitions";
+import Footer from "src/components/shared/Footer/Footer.astro";
 
 interface Props {
   title: string;
@@ -29,5 +30,6 @@ const { title } = Astro.props;
     <main>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
