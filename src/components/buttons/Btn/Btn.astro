@@ -18,5 +18,9 @@ const { class: cls, ...rest } = Astro.props;
     background-color: var(--primary);
     min-height: var(--h-inputs);
     color: var(--white);
+
+    &:hover:not(:disabled) {
+      animation: deform 0.5s linear both;
+    }
   }
 </style>

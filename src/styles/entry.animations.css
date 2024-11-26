@@ -1,0 +1,52 @@
+.entry {
+  animation-timeline: view();
+
+  animation-name: entry;
+  animation-fill-mode: both;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+  animation-timing-function: linear;
+}
+
+@keyframes entry {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.contractionEntry {
+  animation: contractionEntry 0.4s linear both;
+}
+
+@keyframes contractionEntry {
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  0% {
+    letter-spacing: 1em;
+    transform: translateZ(300px) translateY(200px);
+    opacity: 0;
+  }
+}
+
+.entranceByCenter {
+  animation: entranceByCenter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes entranceByCenter {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
