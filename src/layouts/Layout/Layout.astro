@@ -29,9 +29,17 @@ const { title = SEO.title } = Astro.props;
     <!-- SEO -->
     <meta name="description" content={SEO.description} />
     <meta name="author" content={SEO.author} />
+    <meta name="language" content="es" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="Dragon, películas, cine, series, películas online, streaming, estrenos, reseñas de películas, recomendaciones de cine, películas populares, ver películas, entretenimiento"
+    />
 
     <!--OG Metatags -->
     <meta property="og:title" content={title} />
+    <meta property="og:type" content="video.other" />
+    <meta property="og:locale" content="es_ES" />
     <meta property="og:description" content={SEO.description} />
     <meta property="og:image" content={SEO.img} />
 
