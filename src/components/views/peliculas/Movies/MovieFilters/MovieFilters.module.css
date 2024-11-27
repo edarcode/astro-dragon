@@ -1,7 +1,13 @@
 .filters {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
   gap: var(--md);
-  justify-self: center;
-  padding-top: var(--lg);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--lg);
+
+  @media (min-width: 375px) and (max-width: 767px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 var(--lg);
+  }
 }

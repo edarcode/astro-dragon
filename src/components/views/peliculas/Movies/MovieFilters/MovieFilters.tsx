@@ -37,6 +37,7 @@ export default function MovieFilters({ className, ...rest }: Props) {
   return (
     <form {...rest} className={finalClass} onSubmit={handleSubmit(obSubmit)}>
       <Search
+        className={css.search}
         {...register("title")}
         defaultValue={title}
         placeholder="Título"
