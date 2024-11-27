@@ -10,6 +10,7 @@ import "../../styles/entry.animations.css";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../../components/shared/Header/Header.astro";
 import Footer from "../../components/shared/Footer/Footer.astro";
+import { SEO } from "./seo";
 
 interface Props {
   title: string;
@@ -24,6 +25,16 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO -->
+    <meta name="description" content={SEO.description} />
+    <meta name="author" content={SEO.author} />
+
+    <!--OG Metatags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={SEO.description} />
+    <meta property="og:image" content={SEO.img} />
+
     <title>{title}</title>
     <ViewTransitions />
   </head>
