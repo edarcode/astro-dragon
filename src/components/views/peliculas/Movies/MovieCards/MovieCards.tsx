@@ -7,7 +7,7 @@ import MovieCard from "../MovieCard/MovieCard";
 import css from "./MovieCards.module.css";
 
 export default function MovieCards() {
-  const { movies, isLoading } = useGetMovies();
+  const { movies, isLoading, isError } = useGetMovies();
   const scrollPos = useMovies((movies) => movies.scrollPos);
 
   useEffect(() => {
@@ -15,6 +15,8 @@ export default function MovieCards() {
   }, []);
 
   if (isLoading) return <Spinner />;
+  if (!isError)
+    return <div className={css.err}>Error al cargar los datos 🫤.</div>;
   if (!movies) return null;
 
   return (

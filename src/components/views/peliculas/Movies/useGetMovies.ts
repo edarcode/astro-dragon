@@ -9,7 +9,7 @@ export const useGetMovies = () => {
   const isScrollEnd = useScrollEnd(750);
   const filters = useMovies((movies) => movies.filters);
 
-  const { data, isLoading, fetchNextPage } = useInfiniteQuery({
+  const { data, isLoading, fetchNextPage, isError } = useInfiniteQuery({
     queryKey: ["movies", filters],
     queryFn: ({ signal, pageParam }) => getMovies({ signal, url: pageParam }),
     initialPageParam: TMDB.getUrlMovies(filters).url,
@@ -24,5 +24,5 @@ export const useGetMovies = () => {
 
   const movies = data?.pages.map((item) => item.results).flat();
 
-  return { movies: movies ?? [], isLoading };
+  return { movies: movies ?? [], isLoading, isError };
 };
