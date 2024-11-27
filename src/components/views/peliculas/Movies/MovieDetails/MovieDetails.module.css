@@ -1,0 +1,55 @@
+.details {
+  position: relative;
+  height: 100%;
+  display: grid;
+  place-content: center;
+
+  .card {
+    max-width: 500px;
+    display: grid;
+    justify-items: center;
+    border: 4px solid var(--secondary);
+    color: var(--white);
+    overflow: hidden;
+    margin: var(--lg) 0;
+
+    border-radius: 50px;
+    box-shadow: 20px 20px 60px #333, -20px -20px 60px #252525;
+
+    .banner {
+      img {
+        aspect-ratio: 492 / 277;
+      }
+    }
+
+    .content {
+      position: relative;
+      display: grid;
+      gap: var(--md);
+      padding: var(--xl);
+
+      h1 {
+        font-size: 2em;
+      }
+
+      button {
+        justify-self: start;
+      }
+
+      .trailer {
+        position: absolute;
+        top: var(--md);
+        right: var(--md);
+      }
+    }
+  }
+
+  .bgi {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+  }
+}

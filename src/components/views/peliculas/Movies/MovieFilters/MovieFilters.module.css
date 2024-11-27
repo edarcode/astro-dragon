@@ -3,4 +3,5 @@
   grid-template-columns: auto auto;
   gap: var(--md);
   justify-self: center;
+  padding-top: var(--lg);
 }

@@ -1,6 +1,9 @@
 import { TMDB } from "src/consts/tmdb";
+import type { MovieDetails } from "./types";
 
-export const getMovieById = async (params: Params): Promise<any> => {
+export const getMovieById = async (
+  params: Params
+): Promise<MovieDetails | undefined> => {
   const { signal, movieId } = params;
 
   if (!movieId) return;
