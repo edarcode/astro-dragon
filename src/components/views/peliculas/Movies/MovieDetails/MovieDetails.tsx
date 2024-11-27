@@ -20,6 +20,7 @@ export default function MovieDetails() {
   if (isLoading) return <Spinner />;
   if (!movie) return null;
 
+  console.log(movie);
   return (
     <div className={css.details}>
       <div className={css.card}>
@@ -32,11 +33,17 @@ export default function MovieDetails() {
           />
         </picture>
         <div className={css.content}>
-          <h1>{movie.title}</h1>
-          <p>{movie.overview}</p>
+          <h1>
+            <span>{movie.title}</span>
+            <span>{movie.tagline ? movie.tagline : "---"}</span>
+          </h1>
+
+          <p className={css.overview}>{movie.overview}</p>
           <Btn onClick={closeDetails}>Seguir buscando</Btn>
           <Btn className={css.trailer}>Trailer</Btn>
         </div>
+
+        <span className={css.average}>{movie.vote_average.toFixed()} ⭐</span>
       </div>
 
       <img className={css.bgi} src={movieDetails.src} alt={"fondo"} />
