@@ -20,7 +20,11 @@ export class TMDB {
 
     if (title) return this.getUrlMoviesByTitle(title, page);
 
-    const baseUrl = `${this.baseUrl}/discover/movie?api_key=${API_KEY}&language=es-ES&with_genres=${genre}&primary_release_year=${year}&sort_by=vote_average.desc`;
+    const baseUrl = `${
+      this.baseUrl
+    }/discover/movie?api_key=${API_KEY}&language=es-ES&with_genres=${
+      !genre ? "" : genre
+    }&year=${year}&sort_by=vote_average.desc`;
 
     return this.getUrls(baseUrl, page);
   }

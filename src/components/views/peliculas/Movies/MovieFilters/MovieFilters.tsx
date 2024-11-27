@@ -12,11 +12,13 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Select from "src/react/components/Select/Select";
 import { GENRES } from "./genres";
+import { YEARS } from "./years";
 
 export default function MovieFilters({ className, ...rest }: Props) {
   const setFilters = useMovies((movies) => movies.setFilters);
   const title = useMovies((movies) => movies.filters?.title);
   const genre = useMovies((movies) => movies.filters?.genre);
+  const year = useMovies((movies) => movies.filters?.year);
 
   const {
     register,
@@ -40,6 +42,7 @@ export default function MovieFilters({ className, ...rest }: Props) {
         placeholder="Título"
       />
       <Select opt={GENRES} {...register("genre")} defaultValue={genre} />
+      <Select opt={YEARS} {...register("year")} defaultValue={year} />
       <Btn disabled={!!Object.keys(errors).length}>Buscar</Btn>
     </form>
   );
