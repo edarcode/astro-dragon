@@ -57,6 +57,6 @@ export class TMDB {
 type Filters = {
   title?: string;
   page?: number;
-  genre?: string;
+  genre?: number;
   year?: number;
 } | null;
