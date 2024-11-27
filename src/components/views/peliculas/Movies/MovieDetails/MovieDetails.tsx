@@ -53,6 +53,10 @@ export default function MovieDetails() {
             ))}
           </div>
 
+          <span className={css.year}>
+            {new Date(movie.release_date).getFullYear()}
+          </span>
+
           <h1>
             <span>{movie.title}</span>
             <span>{movie.tagline ? movie.tagline : "---"}</span>

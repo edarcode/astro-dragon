@@ -1,5 +1,7 @@
-const years = Array.from({ length: 2025 - 1996 + 1 }, (_, i) => {
-  const year = 1996 + i;
+const currentYear = 2024;
+
+const years = Array.from({ length: currentYear - 1996 + 1 }, (_, i) => {
+  const year = currentYear - i;
   return {
     value: year,
     display: String(year),

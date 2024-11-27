@@ -7,6 +7,7 @@
   .card {
     position: relative;
     max-width: 500px;
+    min-width: 320px;
     display: grid;
     justify-items: center;
     border: 4px solid var(--secondary);
@@ -58,6 +59,12 @@
           border-radius: var(--md);
           line-height: 90%;
         }
+      }
+
+      .year {
+        position: absolute;
+        top: var(--lg);
+        right: var(--lg);
       }
 
       h1 {
