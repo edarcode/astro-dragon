@@ -62,7 +62,7 @@ export default function MovieDetails() {
             <span>{movie.tagline ? movie.tagline : "---"}</span>
           </h1>
           <p className={css.overview}>{movie.overview}</p>
-          <Btn onClick={closeDetails}>Seguir buscando</Btn>
+          <Btn onClick={closeDetails}>Seguir buscando pelis</Btn>
         </div>
 
         <span className={css.average}>{movie.vote_average.toFixed()} ⭐</span>
