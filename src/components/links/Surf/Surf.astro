@@ -14,6 +14,10 @@ const isActive = Astro.url.pathname === Astro.props.href;
 <style>
   .surf {
     color: inherit;
+
+    &:hover {
+      color: var(--accent);
+    }
   }
 
   .isActive {
@@ -29,8 +33,8 @@ const isActive = Astro.url.pathname === Astro.props.href;
       bottom: calc(var(--sm) * -1);
       left: 0;
       width: 100%;
-      height: 1px;
-      background-color: currentColor;
+      height: 2px;
+      background-color: var(--accent);
     }
   }
 </style>

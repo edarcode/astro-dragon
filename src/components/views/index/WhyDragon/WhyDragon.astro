@@ -6,10 +6,10 @@ import { WHY_DRAGON } from "./whyDragon";
 import Card from "src/components/cards/Card/Card.astro";
 ---
 
-<div class={css.why}>
+<div class:list={[css.why]}>
   <h3>¿Por qué <span>Dragon</span>?</h3>
 
-  <section class={css.cards}>
+  <section class:list={[css.cards, "entryByCenterScroll"]}>
     {WHY_DRAGON.map((item) => <Card content={item.reason} />)}
   </section>
 

@@ -11,10 +11,6 @@
     gap: var(--lg);
     font-size: 1.2rem;
 
-    animation: entryByCenter linear both;
-    animation-timeline: view();
-    animation-range: entry 10% cover 30%;
-
     .logo {
       justify-self: center;
     }
@@ -25,16 +21,5 @@
         text-align: center;
       }
     }
-  }
-}
-
-@keyframes entryByCenter {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
   }
 }
