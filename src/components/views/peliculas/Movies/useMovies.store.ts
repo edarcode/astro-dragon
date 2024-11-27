@@ -14,6 +14,7 @@ type Movies = {
 
 type Filters = {
   title?: string;
+  genre?: number;
 };
 
 export const useMovies = create<Movies>()(

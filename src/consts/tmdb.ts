@@ -14,13 +14,13 @@ export class TMDB {
   static getUrlMovies(filters: Filters) {
     if (!filters) return this.getUrlPopularMovies();
 
-    const { page = 1, title, withGenres, year } = filters;
+    const { page = 1, title, genre, year } = filters;
 
-    if (!title && !withGenres && !year) return this.getUrlPopularMovies(page);
+    if (!title && !genre && !year) return this.getUrlPopularMovies(page);
 
     if (title) return this.getUrlMoviesByTitle(title, page);
 
-    const baseUrl = `${this.baseUrl}/discover/movie?api_key=${API_KEY}&language=es-ES&with_genres=${withGenres}&primary_release_year=${year}&sort_by=vote_average.desc`;
+    const baseUrl = `${this.baseUrl}/discover/movie?api_key=${API_KEY}&language=es-ES&with_genres=${genre}&primary_release_year=${year}&sort_by=vote_average.desc`;
 
     return this.getUrls(baseUrl, page);
   }
@@ -53,6 +53,6 @@ export class TMDB {
 type Filters = {
   title?: string;
   page?: number;
-  withGenres?: string;
+  genre?: string;
   year?: number;
 } | null;

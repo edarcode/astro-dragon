@@ -6,6 +6,7 @@ export const movieFiltersSchema = z
       .string()
       .max(128)
       .transform((title) => title.toLowerCase()),
+    genre: z.coerce.number(),
   })
   .strict()
   .partial();

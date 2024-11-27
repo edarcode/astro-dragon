@@ -1,6 +1,6 @@
 .filters {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   gap: var(--md);
   justify-self: center;
   padding-top: var(--lg);
