@@ -15,7 +15,7 @@ export default function MovieCards() {
   }, []);
 
   if (isLoading) return <Spinner />;
-  if (!isError)
+  if (isError)
     return <div className={css.err}>Error al cargar los datos 🫤.</div>;
   if (!movies) return null;
 
