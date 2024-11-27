@@ -22,6 +22,11 @@ export const useGetMovies = () => {
     fetchNextPage();
   }, [isScrollEnd]);
 
+  useEffect(() => {
+    if (!isError) return;
+    localStorage.removeItem("REACT_QUERY_OFFLINE_CACHE");
+  }, [isError]);
+
   const movies = data?.pages.map((item) => item.results).flat();
 
   return { movies: movies ?? [], isLoading, isError };

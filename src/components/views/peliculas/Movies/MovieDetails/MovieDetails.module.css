@@ -16,7 +16,7 @@
     margin: var(--lg);
 
     border-radius: 40px;
-    box-shadow: 20px 20px 60px #333, -20px -20px 60px #252525;
+    box-shadow: 5px 5px 25px var(--black), -5px -5px 25px var(--black);
 
     .average {
       position: absolute;
