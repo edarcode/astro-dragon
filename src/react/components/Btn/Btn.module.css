@@ -12,5 +12,6 @@
 
   &:disabled {
     background-color: transparent;
+    color: var(--grey);
   }
 }

@@ -5,7 +5,7 @@ type Movies = {
   movieId: number | null;
   isMovieDetails: boolean;
   scrollPos: number;
-  filters: Filters;
+  filters: Filters | null;
   openDetails: (movieId: number) => void;
   closeDetails: () => void;
   resetScrollPos: () => void;
@@ -22,7 +22,7 @@ export const useMovies = create<Movies>()(
       movieId: null,
       isMovieDetails: false,
       scrollPos: 0,
-      filters: { title: "" },
+      filters: null,
 
       openDetails(movieId) {
         set({ isMovieDetails: true, movieId, scrollPos: window.scrollY });

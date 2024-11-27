@@ -2,8 +2,8 @@ import { useInfiniteQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { useScrollEnd } from "../../../../react/hooks/useScrollEnd";
 import { useMovies } from "./useMovies.store";
-import { addFiltersMovies } from "./addFiltersMovies.util";
 import { getMovies } from "./getMovies.service";
+import { TMDB } from "src/consts/tmdb";
 
 export const useGetMovies = () => {
   const isScrollEnd = useScrollEnd(750);
@@ -11,14 +11,10 @@ export const useGetMovies = () => {
 
   const { data, isLoading, fetchNextPage } = useInfiniteQuery({
     queryKey: ["movies", filters],
-    queryFn: ({ signal, pageParam: url }) => getMovies({ signal, url }),
-    initialPageParam: addFiltersMovies({ page: "1", title: filters.title }),
-    getNextPageParam: (lastPageMovies) => {
-      return addFiltersMovies({
-        page: String(lastPageMovies.page + 1),
-        title: filters.title,
-      });
-    },
+    queryFn: ({ signal, pageParam }) => getMovies({ signal, url: pageParam }),
+    initialPageParam: TMDB.getUrlMovies(filters).url,
+    getNextPageParam: (lastPage) =>
+      TMDB.getUrlMovies({ ...filters, page: lastPage.page }).nextUrl,
   });
 
   useEffect(() => {

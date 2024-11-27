@@ -4,7 +4,7 @@ import css from "./MovieCard.module.css";
 import { useMovies } from "../useMovies.store";
 
 export default function MovieCard({ movie }: Props) {
-  const poster = TMDB.completePath(movie.poster_path);
+  const poster = TMDB.completeImgUrl(movie.poster_path);
   const openDetails = useMovies((movies) => movies.openDetails);
 
   return (

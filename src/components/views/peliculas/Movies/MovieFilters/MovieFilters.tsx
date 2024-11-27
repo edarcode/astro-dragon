@@ -13,7 +13,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 export default function MovieFilters({ className, ...rest }: Props) {
   const setFilters = useMovies((movies) => movies.setFilters);
-  const title = useMovies((movies) => movies.filters.title);
+  const title = useMovies((movies) => movies.filters?.title);
 
   const {
     register,
