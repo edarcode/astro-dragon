@@ -28,7 +28,7 @@ export default function MovieDetails() {
 
   return (
     <div className={css.details}>
-      <div className={css.card}>
+      <div className={css.card} style={trailerId ? { maxWidth: "850px" } : {}}>
         {trailerId ? (
           <div className={css.banner}>
             <lite-youtube videoId={trailerId}>
