@@ -24,7 +24,7 @@ export class TMDB {
       this.baseUrl
     }/discover/movie?api_key=${API_KEY}&language=es-ES&with_genres=${
       !genre ? "" : genre
-    }&year=${year}&sort_by=popularity.desc`;
+    }&primary_release_year=${year}&sort_by=popularity.desc`;
 
     return this.getUrls(baseUrl, page);
   }
