@@ -47,6 +47,12 @@ export default function MovieDetails() {
         )}
 
         <div className={css.content}>
+          <div className={css.genres}>
+            {movie.genres.map((genre) => (
+              <span key={genre.id}>{genre.name}</span>
+            ))}
+          </div>
+
           <h1>
             <span>{movie.title}</span>
             <span>{movie.tagline ? movie.tagline : "---"}</span>

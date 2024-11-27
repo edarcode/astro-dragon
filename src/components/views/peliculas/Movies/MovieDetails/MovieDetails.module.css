@@ -14,7 +14,7 @@
     overflow: hidden;
     margin: var(--lg);
 
-    border-radius: 50px;
+    border-radius: 40px;
     box-shadow: 20px 20px 60px #333, -20px -20px 60px #252525;
 
     .average {
@@ -46,13 +46,27 @@
       gap: var(--md);
       padding: var(--xl);
 
+      .genres {
+        display: flex;
+        gap: var(--md);
+
+        span {
+          font-size: small;
+          background-color: var(--accent);
+          padding: var(--sm) var(--md);
+          justify-self: start;
+          border-radius: var(--md);
+          line-height: 90%;
+        }
+      }
+
       h1 {
         font-size: 1.4em;
         display: grid;
+
         > :nth-child(2) {
           font-size: small;
-          background-color: var(--secondary);
-          padding: var(--sm) var(--md);
+          color: var(--hl);
           justify-self: start;
           border-radius: var(--md);
         }
